@@ -4,8 +4,10 @@ on: push
 
 jobs:
   first-job:
-    runs-on: ubuntu-latest 
+    runs-on: self-hosted
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v4 
       - name: Welcome message
         run: echo "Welcome from GitHub Actions"
       
