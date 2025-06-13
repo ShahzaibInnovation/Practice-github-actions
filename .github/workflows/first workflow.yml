@@ -4,7 +4,7 @@ on: push
 
 jobs:
   first-job:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest 
     steps:
       - name: Welcome message
         run: echo "Welcome from GitHub Actions"
