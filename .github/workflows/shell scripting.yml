@@ -6,13 +6,13 @@ jobs:
   first-job:
     runs-on: ubuntu-latest 
     steps:
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4 
 
       - name: Welcome message
         run: echo "Welcome from GitHub Actions"
         
       - name: Run test script
-        run: ./test-script.sh
-    
-      
+        run: |
+          chmod +x ./test-script.sh
+          ./test-script.sh
